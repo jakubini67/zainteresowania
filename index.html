@@ -4,29 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jakub Strozik – Minecraft Achievements</title>
+    <title>Jakub – Minecraft</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
-            background: url('https://wallpapercave.com/wp/wp2552016.png') repeat;
+            background: url('DIRT.jpg') repeat;
+            background-size: 64px 64px;
             min-height: 100vh;
             margin: 0;
             font-family: 'Press Start 2P', Arial, sans-serif;
             color: #2e7d32;
         }
         .container {
-            background: rgba(110, 215, 84, 0.95);
+            background: rgba(110, 215, 84, 0.93) url('grass.jpeg') repeat;
+            background-size: 80px 80px;
+            opacity: 0.98;
             max-width: 700px;
             margin: 40px auto;
             border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.35), 0 0 0 12px #3e2723;
             padding: 32px;
+            position: relative;
         }
         h1 {
-            color: #388e3c;
-            text-shadow: 2px 2px 0 #8d6e63;
-            font-size: 2.2em;
-            margin-bottom: 12px;
+            color: #fff;
+            text-shadow: 4px 4px 12px #3e2723, 0 0 8px #388e3c;
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+            border-bottom: 3px solid #063508;
+            padding-bottom: 10px;
+            background: rgba(60, 120, 40, 0.7);
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        h1:hover {
+            transform: scale(1.08);
         }
         .profile {
             display: flex;
@@ -35,18 +49,23 @@
             margin-bottom: 24px;
         }
         .profile img {
-            width: 120px;
-            height: 120px;
+            width: 160px;
+            height: 160px;
             border-radius: 16px;
             box-shadow: 0 4px 16px rgba(0,0,0,0.15);
             object-fit: cover;
+            transition: transform 0.2s;
+        }
+        .profile img:hover {
+            transform: scale(1.12);
         }
         .about {
             font-size: 1.1em;
             margin-bottom: 24px;
+            color: #063508;
         }
         .achievements {
-            background: #2ada30;
+            background: #063508;
             border-radius: 12px;
             padding: 18px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -65,6 +84,44 @@
             border-radius: 8px;
             box-shadow: 0 4px 16px rgba(0,0,0,0.12);
         }
+        .gallery {
+            margin-top: 32px;
+            background: #063508;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .gallery-title {
+            font-size: 1.3em;
+            color: #388e3c;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .gallery-slots {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+        .gallery-slot {
+            background: #fff;
+            border-radius: 8px;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            overflow: hidden;
+        }
+        .gallery-slot img {
+            max-width: 100px;
+            max-height: 100px;
+            border-radius: 6px;
+        }
+        .empty-slot {
+            color: #bbb;
+            font-size: 0.9em;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -72,14 +129,14 @@
         <h1>Jakub Jasiński</h1>
         <div class="profile">
             <img src="./ja.jpeg" alt="Jakub's Minecraft Avatar">
-            <div>
-                <strong>Age:</strong> 16<br>
-                <strong>Location:</strong> Poznan, Poland<br>
-                <strong>Hobby:</strong> Minecraft Player
+            <div style="display: flex; flex-direction: column; justify-content: center; font-size: 1.2em; margin-left: 12px; color: #063508;">
+                <span><strong>Age:</strong> 16</span>
+                <span><strong>Location:</strong> Poland</span>
+                <span><strong>Hobby:</strong> Minecraft Player</span>
             </div>
         </div>
         <div class="about">
-            <p>Hi! I'm Jakub, a passionate Minecraft player from Wroclaw. I love building, exploring, and challenging myself in the world of blocks. Minecraft is not just a game for me—it's a place where I unleash my creativity and connect with friends.</p>
+            <p>Hi! I'm Jakub, a passionate Minecraft player from Poland. I love building, exploring, and challenging myself in the world of blocks. Minecraft is not just a game for me, it's a place where I unleash my creativity and connect with friends.</p>
         </div>
         <div class="achievements">
             <h2>My Minecraft Achievements</h2>
@@ -92,7 +149,16 @@
                 <li>Participated in Minecraft community events</li>
             </ul>
         </div>
-        <img class="minecraft-img" src="data:image/jpeg;base64,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" alt="Minecraft Grass Block">
+        <img class="minecraft-img" src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/02/Minecraft-Combat-Tips-7.jpg" alt="Minecraft Grass Block">
+        <div class="gallery">
+            <div class="gallery-title">Fun Minecraft Gallery</div>
+            <div class="gallery-slots">
+                <div class="gallery-slot"><img src="pig.jpeg" alt="Minecraft Pig"></div>
+                <div class="gallery-slot"><img src="sheep.jpeg" alt="Minecraft Sheep"></div>
+                <div class="gallery-slot empty-slot">Empty Slot</div>
+                <div class="gallery-slot empty-slot">Empty Slot</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
